@@ -364,7 +364,7 @@ Transform:
   m_GameObject: {fileID: 56799660}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.68, y: 2.8, z: 0}
+  m_LocalPosition: {x: -0.62, y: 1.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -441,11 +441,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6340510636907301322, guid: 2f2cca217337418459a94f2ee281cbe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5702684
+      value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: 6340510636907301322, guid: 2f2cca217337418459a94f2ee281cbe1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1312113
+      value: 2.88
       objectReference: {fileID: 0}
     - target: {fileID: 6340510636907301322, guid: 2f2cca217337418459a94f2ee281cbe1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1483,7 +1483,7 @@ Transform:
   m_GameObject: {fileID: 1064175801}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.53, y: 1.83, z: 0}
+  m_LocalPosition: {x: 7.95, y: 1.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1839,7 +1839,7 @@ MonoBehaviour:
   m_Creator: {fileID: 0}
   m_Modifiers: []
   m_ColliderSegment:
-  - {x: -7.704204, y: -4.259533}
+  - {x: -7.7042055, y: -4.259533}
   - {x: -7.5325494, y: -3.7568355}
   - {x: -7.6494017, y: 7.040162}
   - {x: -7.5513973, y: 7.1907167}
@@ -1896,12 +1896,12 @@ MonoBehaviour:
   - {x: 5.346981, y: 6.439864}
   - {x: 7.534605, y: 6.5688686}
   - {x: 7.616349, y: 6.419017}
-  - {x: 7.5981073, y: -3.6888437}
+  - {x: 7.5981073, y: -3.6888447}
   - {x: 7.774288, y: -4.1888285}
   - {x: 7.274826, y: -4.01118}
   - {x: -1.2056162, y: -4.0015697}
-  - {x: -7.205635, y: -4.076232}
-  - {x: -7.704204, y: -4.259533}
+  - {x: -7.205634, y: -4.0762324}
+  - {x: -7.7042055, y: -4.259533}
 --- !u!1971053207 &1494052310
 SpriteShapeRenderer:
   m_ObjectHideFlags: 0
@@ -2012,7 +2012,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -7.704204, y: -4.259533}
+  - {x: -7.7042055, y: -4.259533}
   - {x: -7.5325494, y: -3.7568355}
   - {x: -7.6494017, y: 7.040162}
   - {x: -7.5513973, y: 7.1907167}
@@ -2069,12 +2069,12 @@ EdgeCollider2D:
   - {x: 5.346981, y: 6.439864}
   - {x: 7.534605, y: 6.5688686}
   - {x: 7.616349, y: 6.419017}
-  - {x: 7.5981073, y: -3.6888437}
+  - {x: 7.5981073, y: -3.6888447}
   - {x: 7.774288, y: -4.1888285}
   - {x: 7.274826, y: -4.01118}
   - {x: -1.2056162, y: -4.0015697}
-  - {x: -7.205635, y: -4.076232}
-  - {x: -7.704204, y: -4.259533}
+  - {x: -7.205634, y: -4.0762324}
+  - {x: -7.7042055, y: -4.259533}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -2742,7 +2742,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.1
+  orthographic size: 8.899397
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2767,7 +2767,7 @@ Transform:
   m_GameObject: {fileID: 2080968286}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -0.95, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2838,6 +2838,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 541061975812880169, guid: ac3eaee739767fb4c9f47071d73ac05d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 5477856979259502223, guid: ac3eaee739767fb4c9f47071d73ac05d, type: 3}
       propertyPath: m_Name
       value: JumpPad
@@ -3015,11 +3019,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5329277832076812516, guid: ed35ada7243a7f74089dc386822c61fe, type: 3}
       propertyPath: jump
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5329277832076812516, guid: ed35ada7243a7f74089dc386822c61fe, type: 3}
       propertyPath: moveForce
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8085317570863167870, guid: ed35ada7243a7f74089dc386822c61fe, type: 3}
       propertyPath: m_LocalPosition.x

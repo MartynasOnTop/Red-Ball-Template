@@ -1341,7 +1341,7 @@ MonoBehaviour:
   m_Creator: {fileID: 0}
   m_Modifiers: []
   m_ColliderSegment:
-  - {x: -7.704204, y: -4.259533}
+  - {x: -7.7042055, y: -4.259533}
   - {x: -7.5325494, y: -3.7568355}
   - {x: -7.6494017, y: 7.040162}
   - {x: -7.555767, y: 7.1911116}
@@ -1420,12 +1420,12 @@ MonoBehaviour:
   - {x: 5.191578, y: 6.5241838}
   - {x: 7.5405664, y: 6.569102}
   - {x: 7.616349, y: 6.419017}
-  - {x: 7.5981073, y: -3.6888437}
+  - {x: 7.5981073, y: -3.6888447}
   - {x: 7.774288, y: -4.1888285}
   - {x: 7.274826, y: -4.01118}
   - {x: -1.2056162, y: -4.0015697}
-  - {x: -7.205635, y: -4.076232}
-  - {x: -7.704204, y: -4.259533}
+  - {x: -7.205634, y: -4.0762324}
+  - {x: -7.7042055, y: -4.259533}
 --- !u!1971053207 &1494052310
 SpriteShapeRenderer:
   m_ObjectHideFlags: 0
@@ -1536,7 +1536,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -7.704204, y: -4.259533}
+  - {x: -7.7042055, y: -4.259533}
   - {x: -7.5325494, y: -3.7568355}
   - {x: -7.6494017, y: 7.040162}
   - {x: -7.555767, y: 7.1911116}
@@ -1615,12 +1615,12 @@ EdgeCollider2D:
   - {x: 5.191578, y: 6.5241838}
   - {x: 7.5405664, y: 6.569102}
   - {x: 7.616349, y: 6.419017}
-  - {x: 7.5981073, y: -3.6888437}
+  - {x: 7.5981073, y: -3.6888447}
   - {x: 7.774288, y: -4.1888285}
   - {x: 7.274826, y: -4.01118}
   - {x: -1.2056162, y: -4.0015697}
-  - {x: -7.205635, y: -4.076232}
-  - {x: -7.704204, y: -4.259533}
+  - {x: -7.205634, y: -4.0762324}
+  - {x: -7.7042055, y: -4.259533}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -2147,7 +2147,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.1
+  orthographic size: 8.899397
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2172,7 +2172,7 @@ Transform:
   m_GameObject: {fileID: 2080968286}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -0.81, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2436,11 +2436,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5329277832076812516, guid: ed35ada7243a7f74089dc386822c61fe, type: 3}
       propertyPath: jump
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5329277832076812516, guid: ed35ada7243a7f74089dc386822c61fe, type: 3}
       propertyPath: moveForce
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8085317570863167870, guid: ed35ada7243a7f74089dc386822c61fe, type: 3}
       propertyPath: m_LocalPosition.x

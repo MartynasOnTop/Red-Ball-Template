@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int hp;
+    public const int shp = 3;
+    int hp;
     public int currentLevel;
     public List<string> levels;
 
@@ -19,6 +21,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
+        hp = shp;
     }
 
     private void Update()
@@ -45,6 +48,7 @@ public class GameManager : MonoBehaviour
         {
             currentLevel = 0;
             SceneManager.LoadScene(currentLevel);
+            hp += shp;
         }
         else if (hp > 0)
         {
