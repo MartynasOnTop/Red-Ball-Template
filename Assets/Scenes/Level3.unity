@@ -3317,11 +3317,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5329277832076812516, guid: ed35ada7243a7f74089dc386822c61fe, type: 3}
       propertyPath: jump
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5329277832076812516, guid: ed35ada7243a7f74089dc386822c61fe, type: 3}
       propertyPath: moveForce
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8085317570863167870, guid: ed35ada7243a7f74089dc386822c61fe, type: 3}
       propertyPath: m_LocalPosition.x
