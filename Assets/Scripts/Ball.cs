@@ -35,6 +35,7 @@ public class Ball : MonoBehaviour
         if(collision.gameObject.CompareTag("Enemy"))
         {
             FindObjectOfType<GameManager>().Lose();
+            Destroy(gameObject);
         }
     }
     private void OnCollisionExit2D(Collision2D collision)

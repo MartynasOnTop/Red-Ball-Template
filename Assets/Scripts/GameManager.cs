@@ -1,65 +1,77 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public const int shp = 3;
-    int hp;
+    public int hp;
     public int currentLevel;
+    bool hasWon;
     public List<string> levels;
 
-    bool hasWon;
-
-    float targetTranstionScale;
+    float targetTransitionScale;
     public Transform transition;
 
-    public GameObject piece;
+    AudioSource musicSource;
+    public AudioClip winSound;
+    public AudioClip loseSound;
+    public AudioClip gameOverSound;
 
-    private void Start()
+    void Start()
     {
+        musicSource = GetComponent<AudioSource>();
         DontDestroyOnLoad(gameObject);
-        hp = shp;
+
+        // destroys the game manager if there is another one
+        if (FindObjectsOfType<GameManager>().Length > 1)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    private void Update()
+    void Update()
     {
-        transition.localScale = Vector3.MoveTowards(transition.localScale, Vector3.one * targetTranstionScale, 60 * Time.deltaTime);
+        var targetV3 = Vector3.one * targetTransitionScale;
+        transition.localScale = Vector3.MoveTowards(transition.localScale, targetV3, 60 * Time.deltaTime);
     }
 
     public void Win()
     {
         if (hasWon) return;
 
+        musicSource.PlayOneShot(winSound);
         hasWon = true;
         currentLevel++;
-        targetTranstionScale = 41;
+        targetTransitionScale = 41;
         Invoke("LoadNextScene", 1.5f);
 
     }
 
+    void LoadNextScene()
+    {
+        var levelName = levels[currentLevel];
+        SceneManager.LoadScene(levelName);
+        hasWon = false;
+        targetTransitionScale = 0;
+    }
+
+
     public void Lose()
     {
-        hp -= 1;
-
-        if (hp <= 0)
+        hp--;
+        if (hp > 0)
         {
+            targetTransitionScale = 41;
+            musicSource.PlayOneShot(loseSound);
+            Invoke("LoadNextScene", 1.5f);
+        }
+        else
+        {
+            targetTransitionScale = 41;
+            musicSource.PlayOneShot(gameOverSound);
             currentLevel = 0;
-            SceneManager.LoadScene(currentLevel);
-            hp += shp;
+            hp = 3;
+            Invoke("LoadNextScene", 1.5f);
         }
-        else if (hp > 0)
-        {
-            SceneManager.LoadScene(currentLevel);
-        }
-    }
-    public void LoadNextScene()
-    {
-        hasWon = false;
-        var levelName = levels[currentLevel];
-        targetTranstionScale = 0;
-        SceneManager.LoadScene(levelName);
     }
 }
