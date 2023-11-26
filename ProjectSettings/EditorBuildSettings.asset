@@ -9,15 +9,18 @@ EditorBuildSettings:
     path: Assets/Art/Showcase.unity
     guid: 417cbcb51dd90435b81b5c5228fc2eb8
   - enabled: 1
+    path: Assets/Scenes/NLevel1.unity
+    guid: af84f5c25dd2b2f4d8f120e4c9ea4d31
+  - enabled: 0
     path: Assets/Scenes/Level1.unity
     guid: 3a93a8f0c18a5234d965b219a0785fcc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level2.unity
     guid: 946231b0ad2a2ed408155db0097da21f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level3.unity
     guid: 09b8c7418b5432047956455ac34c9084
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level4.unity
     guid: 2d31ed0105d09ef49ae8aac2953b4004
   m_configObjects: {}

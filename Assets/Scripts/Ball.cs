@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
+    public GameObject gameManager;
+    public float speedLimit = 10;
     Rigidbody2D rb;
     public int jump = 7;
     public int moveForce = 3;
@@ -14,13 +16,17 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
+        Instantiate(gameManager);
         rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
         var hor = Input.GetAxis("Horizontal");
-        rb.AddForce(new Vector2(hor, 0) * moveForce);
+        rb.AddForce(new Vector2(hor, 0) * moveForce * Time.deltaTime);
+
+        if (rb.velocity.x > speedLimit) rb.velocity = new Vector2(speedLimit, rb.velocity.y);
+        if (rb.velocity.x < -speedLimit) rb.velocity = new Vector2(-speedLimit, rb.velocity.y);
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
@@ -52,6 +58,10 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.name.Contains("JumpPad"))
         {
             rb.velocity += Vector2.up * jumpPadPower;
+        }
+        if (collision.gameObject.CompareTag("Lava"))
+        {
+            FindObjectOfType<GameManager>().Lose();
         }
     }
 }
